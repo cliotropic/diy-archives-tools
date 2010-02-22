@@ -1,6 +1,6 @@
 README for diy-archives-tools
 Shane Landrum <srl@cliotropic.org>
-Version 0.1, last updated February 22, 2010
+Version 0.2, last updated March 12, 2010
 
 The scripts contained here are miscellaneous bits of hackery I use to maintain my personal
 collection of archival-material photos, as described in this conference paper:
@@ -10,10 +10,16 @@ collection of archival-material photos, as described in this conference paper:
 Right now, there's not much here and it's not well-documented because I'm busy writing a 
 dissertation. If you modify and improve these, I'd love to hear more about your work.
 
+I can't guarantee these are bug-free; use at your own risk, and you should probably know
+your way around AppleScript too. If you're confused about how they work, I'd welcome comments, 
+bug reports, or contributions of code and documentation:
+  
+  http://github.com/cliotropic/diy-archives-tools/issues
 
-Here are the basic contents:
 
-- image_scalers
+CONTENTS:
+
+- image_scalers/ (folder)
    Automator actions to rotate and scale images. Slower than ImageMagick on the
    command line, but easier to understand what they're doing.
 
@@ -31,8 +37,18 @@ them manually to ~/Library/Scripts.)
    part of using the current imageFiler.  (I use Hazel because I don't like to mess with cron; 
    skilled commandline users could write a shell script that would do the same work.)
 
-
-
-
-
-
+- PDF from these images.workflow
+   An Automator workflow to take a set of selected images (in the Finder) and turn them into a PDF.
+   You'll need to customize this by adding a custom Quartz filter that compresses the file with
+   JPEG compression, as described here:
+     
+     http://www.macosxhints.com/article.php?story=20031106133852693
+     http://mactoids.com/create-a-quartz-filter-with-colorsync/
+     
+   Once you do that, change the name of the filter in the "Apply Quartz Filter to PDF Documents"
+   step to the name of the new filter you created. (If you don't do this step, your PDF files
+   will end up *very* large.) You may also want to change the name and location of the resulting 
+   PDF file, which will be created by default on the Desktop. 
+   
+   (This whole process would be more flexible if implemented in Applescript; this was just a 
+   quick hack to solve the problem at a basic level.)
