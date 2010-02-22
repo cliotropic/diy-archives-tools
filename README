@@ -1,0 +1,38 @@
+README for diy-archives-tools
+Shane Landrum <srl@cliotropic.org>
+Version 0.1, last updated February 22, 2010
+
+The scripts contained here are miscellaneous bits of hackery I use to maintain my personal
+collection of archival-material photos, as described in this conference paper:
+
+  http://cliotropic.org/blog/talks/camera-laptop-and-what-else/
+
+Right now, there's not much here and it's not well-documented because I'm busy writing a 
+dissertation. If you modify and improve these, I'd love to hear more about your work.
+
+
+Here are the basic contents:
+
+- image_scalers
+   Automator actions to rotate and scale images. Slower than ImageMagick on the
+   command line, but easier to understand what they're doing.
+
+- imageFiler.scpt
+   AppleScript to file images into folders. You'll need to edit this to point to
+   your own preferred image folder before using it, and you should probably be familiar with
+   AppleScript and bash shell scripting to understand what else it does.
+
+(I use these scripts from the Scripts menu in OS X. If you want to do this, you'll need to copy
+them manually to ~/Library/Scripts.)
+
+- rename incoming image files.hazelrules
+   A set of rules for Hazel ( http://www.noodlesoft.com/hazel.php ) which will rename your image
+   files in ways that preserve their original time/date stamps and name order. This is an important
+   part of using the current imageFiler.  (I use Hazel because I don't like to mess with cron; 
+   skilled commandline users could write a shell script that would do the same work.)
+
+
+
+
+
+
