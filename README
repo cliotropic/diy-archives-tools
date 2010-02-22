@@ -10,10 +10,14 @@ collection of archival-material photos, as described in this conference paper:
 Right now, there's not much here and it's not well-documented because I'm busy writing a 
 dissertation. If you modify and improve these, I'd love to hear more about your work.
 
+I can't guarantee these are bug-free; use at your own risk, and you should probably know
+your way around AppleScript too. If you're confused about how they work, I'd welcome comments
+or patches to the documentation.
+
 
 Here are the basic contents:
 
-- image_scalers
+- image_scalers/ (folder)
    Automator actions to rotate and scale images. Slower than ImageMagick on the
    command line, but easier to understand what they're doing.
 
